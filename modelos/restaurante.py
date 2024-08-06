@@ -17,7 +17,7 @@ class Restaurante:
 
     @property #Modificar a forma como aquele atributo vai ser lido
     def ativo(self):
-        return 'verdadeiro' if self._ativo else 'false'
+        return '👍' if self._ativo else '👎'
 
 
 restaurante_praca = Restaurante('Praça', 'Gourmet')
