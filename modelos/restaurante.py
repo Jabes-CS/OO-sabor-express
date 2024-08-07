@@ -20,7 +20,7 @@ class Restaurante:
         return '👍' if self._ativo else '👎'
 
 restaurante_praca = Restaurante('praça', 'gourmet')
-restaurante_praca.nome = 'Praça 2.0'
+restaurante_praca.nome = 'Praça 2.0' # Essa linha de código não vai acontecer nada, pois os objetos está configurados "privados", para não sofrer alterações.
 restaurante_pizza = Restaurante('pizza express', 'italiana')
 
 Restaurante.listar_restaurantes()
