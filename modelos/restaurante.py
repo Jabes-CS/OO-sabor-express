@@ -2,10 +2,10 @@ class Restaurante:
     restaurantes = []
 
     def __init__ (self, nome, categoria):
-        self._nome = nome.title()
-        self._categoria = categoria.upper()
-        self._ativo = False # O undeline serve para proteger e não privar o acesso das pessoas de modificar a ativação do restaurante
-        Restaurante.restaurantes.append(self)
+        self._nome = nome.title() # .title() faz com que a primeira letra da primeira palvra fique com a letra maiúscula.
+        self._categoria = categoria.upper() # .upper() faz com que todos os caractéres/todas as letras, fique com a letra maiúscula.
+        self._ativo = False # O undeline serve para proteger e não privar o acesso das pessoas de modificar a ativação do restaurante.
+        Restaurante.restaurantes.append(self) # .append() adiciona mais informações na lista que vc desejar.
     
     def __str__ (self):
         return f'{self._nome} | {self._categoria}'
