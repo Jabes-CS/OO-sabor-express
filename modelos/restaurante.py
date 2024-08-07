@@ -20,7 +20,7 @@ class Restaurante:
         return '👍' if self._ativo else '👎'
 
 
-restaurante_praca = Restaurante('Praça', 'Gourmet')
-restaurante_pizza = Restaurante('Pazzaria express', 'Italiana')
+restaurante_praca = Restaurante('praça', 'gourmet')
+restaurante_pizza = Restaurante('pizza express', 'italiana')
 
 Restaurante.listar_restaurantes()
