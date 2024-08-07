@@ -11,9 +11,9 @@ class Restaurante:
         return f'{self.nome} | {self.categoria} | {self.ativo}'
     
     def listar_restaurantes():
-        print(f"{'Nome do Restaurante'.ljust(31)} | {'Categoria'.ljust(36)} | {'Status'}")
+        print(f"{'Nome do Restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Status'}")
         for restaurante in Restaurante.restaurantes:
-            print(f"Nome: {restaurante.nome.ljust(25)} | Categoria: {restaurante.categoria.ljust(25)} | Ativo: {restaurante.ativo.ljust(25)}")
+            print(f"{restaurante.nome.ljust(25)} | {restaurante.categoria.ljust(25)} | {restaurante.ativo.ljust(25)}")
 
     @property #Modificar a forma como aquele atributo vai ser lido
     def ativo(self):
