@@ -7,7 +7,7 @@ class Restaurante: # class do nosso programa
         self._ativo = False # O undeline serve para proteger e não privar o acesso das pessoas de modificar a ativação do restaurante.
         Restaurante.restaurantes.append(self) # .append() adiciona mais informações na lista que vc desejar.
     
-    def __str__ (self):
+    def __str__ (self): # O método __str__ fornece uma representação em string da instância.
         return f'{self._nome} | {self._categoria}'
     
     @classmethod # Método da classe que não está referenciando a instância
@@ -26,6 +26,7 @@ class Restaurante: # class do nosso programa
 restaurante_praca = Restaurante('praça', 'gourmet')
 #restaurante_praca.nome = 'Praça 2.0' # Se eu tentar modificar o valor dessa linha de código não vai acontecer nada, pois os objetos está configurados "privados", para não sofrer alterações.
 restaurante_praca.alternar_estado()
+
 restaurante_pizza = Restaurante('pizza express', 'italiana')
 
 Restaurante.listar_restaurantes()
