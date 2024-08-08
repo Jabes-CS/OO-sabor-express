@@ -10,17 +10,22 @@ class Restaurante: # class do nosso programa
     def __str__ (self):
         return f'{self._nome} | {self._categoria}'
     
-    def listar_restaurantes(): # Metodos próprios
+    @classmethod # Método da classe que não está referenciando a instância
+    def listar_restaurantes(cls): # Metodos próprios
         print(f"{'Nome do Restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Status'}")
-        for restaurante in Restaurante.restaurantes:
+        for restaurante in cls.restaurantes:
             print(f"{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {restaurante.ativo.ljust(25)}")
 
     @property #Modificar a forma como aquele atributo vai ser lido
     def ativo(self):
         return '👍' if self._ativo else '👎'
+    
+    def alternar_estado(self):
+        self._ativo = not self._ativo
 
 restaurante_praca = Restaurante('praça', 'gourmet')
 #restaurante_praca.nome = 'Praça 2.0' # Se eu tentar modificar o valor dessa linha de código não vai acontecer nada, pois os objetos está configurados "privados", para não sofrer alterações.
+restaurante_praca.alternar_estado()
 restaurante_pizza = Restaurante('pizza express', 'italiana')
 
 Restaurante.listar_restaurantes()
