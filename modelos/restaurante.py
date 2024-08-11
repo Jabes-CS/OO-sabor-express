@@ -23,6 +23,7 @@ class Restaurante: # class do nosso programa
     def alternar_estado(self):
         self._ativo = not self._ativo
 
+'''
 restaurante_praca = Restaurante('praça', 'gourmet')
 #restaurante_praca.nome = 'Praça 2.0' # Se eu tentar modificar o valor dessa linha de código não vai acontecer nada, pois os objetos está configurados "privados", para não sofrer alterações.
 restaurante_praca.alternar_estado()
@@ -30,3 +31,4 @@ restaurante_praca.alternar_estado()
 restaurante_pizza = Restaurante('pizza express', 'italiana')
 
 Restaurante.listar_restaurantes()
+'''
