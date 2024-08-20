@@ -8,9 +8,9 @@ Restaurante_praca.receber_avaliacao('Rilary', 7.5)
 '''
 
 Restaurante_mexicano = Restaurante('Mexican Food', 'Mexicana')
-Restaurante_mexicano.receber_avaliacao('Jabes', 6.3)
+Restaurante_mexicano.receber_avaliacao('Jabes', 5)
 Restaurante_mexicano.receber_avaliacao('Jhonata', 7)
-Restaurante_mexicano.receber_avaliacao('Rilary', 7.9)
+Restaurante_mexicano.receber_avaliacao('Rilary', 3.5)
 Restaurante_mexicano.alternar_estado()
 
 
