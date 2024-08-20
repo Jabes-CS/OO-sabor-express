@@ -1,3 +1,5 @@
+from modelos.avaliacao import Avaliacao
+
 class Restaurante: # class do nosso programa 
     restaurantes = []
 
@@ -5,6 +7,7 @@ class Restaurante: # class do nosso programa
         self._nome = nome.title() # .title() faz com que a primeira letra da primeira palvra fique com a letra maiúscula.
         self._categoria = categoria.upper() # .upper() faz com que todos os caractéres/todas as letras, fique com a letra maiúscula.
         self._ativo = False # O undeline serve para proteger e não privar o acesso das pessoas de modificar a ativação do restaurante.
+        self._avaliacao = []
         Restaurante.restaurantes.append(self) # .append() adiciona mais informações na lista que vc desejar.
     
     def __str__ (self): # O método __str__ fornece uma representação em string da instância.
@@ -22,6 +25,10 @@ class Restaurante: # class do nosso programa
     
     def alternar_estado(self):
         self._ativo = not self._ativo
+
+    def receber_avaliacao(self, cliente, nota):
+        avaliacao = Avaliacao(cliente, nota)
+        self._avaliacao.append(avaliacao)
 
 '''
 restaurante_praca = Restaurante('praça', 'gourmet')
