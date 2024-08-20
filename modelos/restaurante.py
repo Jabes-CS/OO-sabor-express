@@ -16,6 +16,7 @@ class Restaurante: # class do nosso programa
     @classmethod # Método da classe que não está referenciando a instância
     def listar_restaurantes(cls): # Metodos próprios
         print(f"{'Nome do Restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Avalições'.ljust(25)} | {'Status'}")
+
         for restaurante in cls.restaurantes:
             print(f"{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {str(restaurante.media_avaliacoes).ljust(25)} | {restaurante.ativo}")
 
@@ -27,13 +28,16 @@ class Restaurante: # class do nosso programa
         self._ativo = not self._ativo
 
     def receber_avaliacao(self, cliente, nota):
-        avaliacao = Avaliacao(cliente, nota)
-        self._avaliacao.append(avaliacao)
+
+        if 0 < nota <= 5:
+            avaliacao = Avaliacao(cliente, nota)
+            self._avaliacao.append(avaliacao)
 
     @property
     def media_avaliacoes(self):
+
         if not self._avaliacao:
-            return 0
+            return '-'
         
         soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
         quantidade_de_notas = len(self._avaliacao)
